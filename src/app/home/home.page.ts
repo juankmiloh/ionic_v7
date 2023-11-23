@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController, LoadingController } from '@ionic/angular';
+import { AlertController, LoadingController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -10,13 +10,14 @@ export class HomePage {
 
   constructor(
     public alertCtrl: AlertController,
-    public loadingCtrl: LoadingController
+    public loadingCtrl: LoadingController,
+    public toastCtrl: ToastController
   ) {}
 
   async openPage() {
     const alert = await this.alertCtrl.create({
-      header: 'Products',
-      message: 'You have 300 products',
+      header: 'Producto',
+      message: 'Tienes 300 unidades',
       buttons: ['Ok']
     });
 
@@ -24,13 +25,23 @@ export class HomePage {
   }
 
   async openLoading() {
-    const  loading = await this.loadingCtrl.create({
+    const loading = await this.loadingCtrl.create({
       message: 'Cargando carrito...',
       spinner: 'crescent',
       duration: 2000
     })
 
     await loading.present();
+  }
+
+  async openToast() {
+    const toast = await this.toastCtrl.create({
+      message: 'Ver producto!',
+      duration: 2000,
+      position: 'middle'
+    })
+
+    await toast.present();
   }
 
 }
