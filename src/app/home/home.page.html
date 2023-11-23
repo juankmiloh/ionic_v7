@@ -1,8 +1,9 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      Blank
+      UDEMY COURSE
     </ion-title>
+    <ion-icon class="cart-icon" slot="end" name="cart" (click)="openLoading()"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +15,100 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <img src="../../assets/banner.jpg" alt="" style="display: none;">
+
+    <h1>ion-grid</h1>
+    
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col size="3" (click)="openPage()">
+          <ion-icon name="cart"></ion-icon>
+        </ion-col>
+        <ion-col size="3" (click)="openPage()">
+          <ion-icon name="bicycle"></ion-icon>
+        </ion-col>
+        <ion-col size="3" (click)="openPage()">
+          <ion-icon name="tennisball"></ion-icon>
+        </ion-col>
+        <ion-col size="3" (click)="openPage()">
+          <ion-icon name="medal"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <h1>ion-list</h1>
+
+    <ion-list>
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>T shirt</h2>
+          <p>This is a short description of the shirt am selling.</p>
+          <ion-badge color="primary">$54</ion-badge>
+        </ion-label>
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>T shirt</h2>
+          <p>This is a short description of the shirt am selling.</p>
+          <ion-badge color="primary">$54</ion-badge>
+        </ion-label>
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>T shirt</h2>
+          <p>This is a short description of the shirt am selling.</p>
+          <ion-badge color="primary">$54</ion-badge>
+        </ion-label>
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>T shirt</h2>
+          <p>This is a short description of the shirt am selling.</p>
+          <ion-badge color="primary">$54</ion-badge>
+        </ion-label>
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>T shirt</h2>
+          <p>This is a short description of the shirt am selling.</p>
+          <ion-badge color="primary">$54</ion-badge>
+        </ion-label>
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-item>
+    </ion-list>
+
+    <h1>ion-card</h1>
+
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
   </div>
+
 </ion-content>
